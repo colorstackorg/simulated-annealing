@@ -118,6 +118,8 @@ const getCost = (state: number[][]): number => {
 
     for (let i = 0; i < group.length - 1; i += 1) {
       for (let j = i + 1; j < group.length; j += 1) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore b/c not sure why Typescript is complaining.
         groupQualityScore += preferences[group[i]][group[j]];
       }
     }
